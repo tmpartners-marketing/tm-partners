@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="pl"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="T&amp;M Partners pomaga lokalnym firmom zdobywać więcej klientów: wizytówki Google, proste strony i social media." /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;T&amp;M Partners — Prosty marketing dla lokalnych firm&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg:#0b0f14;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--card:#101826;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--muted:#9fb0c3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--text:#e9f0f7;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--brand:#35c2ff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--brand2:#7c5cff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--border:rgba(255,255,255,.10);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--shadow: 0 12px 40px rgba(0,0,0,.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--radius:18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--max:1100px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(1200px 600px at 20% 0%, rgba(53,194,255,.22), transparent 60%),</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>radial-gradient(900px 500px at 90% 20%, rgba(124,92,255,.22), transparent 55%),</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height:1.5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>a{color:inherit; text-decoration:none}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.wrap{max-width:var(--max); margin:0 auto; padding:24px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position:sticky; top:0; backdrop-filter: blur(10px);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(11,15,20,.70);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom:1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index:50;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo{font-weight:800; letter-spacing:.2px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo span{color:var(--brand)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.menu{display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.menu a{color:var(--muted); font-size:14px; padding:8px 10px; border-radius:10px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.menu a:hover{color:var(--text); background:rgba(255,255,255,.06)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex; align-items:center; justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:12px 16px; border-radius:14px; font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid rgba(53,194,255,.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, rgba(53,194,255,.18), rgba(124,92,255,.14));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn:hover{transform: translateY(-1px)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:64px 0 24px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: 1.1fr .9fr;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap:28px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badge{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:inline-flex; gap:10px; align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:8px 12px; border-radius:999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.04);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dot{width:10px; height:10px; border-radius:50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(135deg, var(--brand), var(--brand2));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 0 0 4px rgba(53,194,255,.10);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1{margin:14px 0 10px; font-size:44px; line-height:1.08}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.lead{color:var(--muted); font-size:17px; margin:0 0 18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-cta{display:flex; gap:12px; flex-wrap:wrap; align-items:center}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.ghost{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:12px 16px; border-radius:14px; font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.04);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.ghost:hover{background:rgba(255,255,255,.07)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-card{padding:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpi{display:grid; grid-template-columns:1fr 1fr; gap:12px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpi .item{padding:14px; border-radius:14px; border:1px solid var(--border); background:rgba(0,0,0,.12)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpi .n{font-weight:900; font-size:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpi .t{color:var(--muted); font-size:13px; margin-top:4px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>section{padding:44px 0}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-head h2{margin:0; font-size:28px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.section-head p{margin:6px 0 0; color:var(--muted)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.box{padding:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.box h3{margin:0 0 6px; font-size:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.box p{margin:0; color:var(--muted); font-size:14px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.list{margin:12px 0 0; padding:0 0 0 18px; color:var(--muted); font-size:14px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.steps{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.step{padding:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.step .num{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:34px; height:34px; border-radius:12px; display:grid; place-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(53,194,255,.16); border:1px solid rgba(53,194,255,.25);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight:900;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.portfolio{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:18px</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.thumb{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:18px; min-height:140px; display:flex; flex-direction:column; justify-content:space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: radial-gradient(500px 220px at 10% 20%, rgba(53,194,255,.14), transparent 65%),</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>radial-gradient(500px 220px at 90% 30%, rgba(124,92,255,.12), transparent 60%),</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>rgba(0,0,0,.12);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.thumb small{color:var(--muted)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.price{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:18px</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.plan{padding:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.plan h3{margin:0 0 6px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.plan .p{color:var(--muted); font-size:14px; margin:0 0 12px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.plan .val{font-size:28px; font-weight:900; margin:10px 0}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.plan ul{margin:12px 0 0; padding-left:18px; color:var(--muted); font-size:14px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.highlight{border:1px solid rgba(53,194,255,.35)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:grid; grid-template-columns: 1.1fr .9fr; gap:16px; margin-top:18px</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>form{display:grid; gap:10px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input, textarea{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding:12px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(0,0,0,.15);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>outline:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>textarea{min-height:110px; resize:vertical}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer{padding:18px 0 36px; color:var(--muted); font-size:13px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tiny{color:var(--muted); font-size:12px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 920px){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero{grid-template-columns:1fr; padding-top:36px}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.grid3, .grid2, .steps, .portfolio, .price, .contact{grid-template-columns:1fr}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>h1{font-size:36px}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.menu{display:none}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header class="nav"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrap nav-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="logo"&gt;T&amp;M &lt;span&gt;Partners&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;nav class="menu" aria-label="Nawigacja"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#dla-kogo"&gt;Dla kogo&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#uslugi"&gt;Usługi&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#proces"&gt;Jak pracujemy&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#cennik"&gt;Cennik&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#kontakt"&gt;Kontakt&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a class="btn" href="#kontakt"&gt;Bezpłatna konsultacja&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;main class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- HERO --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero" id="top"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="badge"&gt;&lt;span class="dot"&gt;&lt;/span&gt; Marketing dla lokalnych firm • PL (UK w przygotowaniu)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;Prosty marketing, który realnie przyciąga klientów.&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="lead"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>Pomagamy lokalnym firmom uporządkować obecność online: wizytówki Google, proste strony i podstawowe social media —</p>
+<p class="p1"><span class="Apple-converted-space">          </span>szybko, czytelnie i bez zbędnych komplikacji.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-cta"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn" href="#kontakt"&gt;Umów bezpłatną konsultację&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="ghost" href="#portfolio"&gt;Zobacz portfolio&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="tiny" style="margin-top:10px"&gt;Bez obietnic cudów. Najpierw porządek i wdrożenie, potem efekt.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="card hero-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="kpi"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="n"&gt;Google&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="t"&gt;Wizytówka, zdjęcia, opis, posty&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="n"&gt;Wix&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="t"&gt;Prosta strona + kontakt&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="n"&gt;Social&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="t"&gt;Podstawowy content i spójność&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="n"&gt;Szybko&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="t"&gt;Wdrożenia w dni, nie miesiące&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- DLA KOGO --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="dla-kogo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;Dla kogo pracujemy&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Firmy lokalne, które chcą wyglądać profesjonalnie w internecie i ułatwić klientom kontakt.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Usługi lokalne&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;barber, beauty, fizjo, warsztat, usługi domowe.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;klient ma Cię znaleźć w Google&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;ma od razu wiedzieć co robisz&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;ma móc szybko zadzwonić / napisać&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Gastro&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;restauracje, kebaby, kawiarnie, food.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;aktualne godziny i menu&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;ładne zdjęcia&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;prosty kontakt i rezerwacje&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Małe firmy rodzinne&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;które nie chcą „marketingu 360°”, tylko konkretów.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;porządek w danych&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;estetyka&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;wdrożenie bez chaosu&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- USŁUGI --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="uslugi"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;Usługi&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Skupiamy się na rzeczach, które dają szybki efekt i są łatwe do utrzymania.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="grid3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Wizytówka Google&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Optymalizacja profilu, żeby klienci mogli Cię znaleźć i szybko się skontaktować.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;opis firmy i usług&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;godziny, kategorie, dane&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;zdjęcia + 3 posty Google&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Prosta strona (Wix)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Czytelna oferta + kontakt. Bez zbędnych bajerów.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;1 strona / landing&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;oferta, cennik, FAQ&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;formularz + CTA&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Social media (opcjonalnie)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Podstawowy content i spójny wygląd profilu.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;grafiki i krótkie posty&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;prosty plan publikacji&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;estetyka i porządek&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- PROCES --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="proces"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;Jak pracujemy&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Prosty proces w 3 krokach — klient wie, co się dzieje i kiedy.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="steps"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="num"&gt;1&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Konsultacja&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Krótka rozmowa i szybki audyt. Ustalamy priorytety i zakres.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="num"&gt;2&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Wdrożenie&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Wprowadzamy zmiany: Google / strona / materiały. Bez przeciągania.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="num"&gt;3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Gotowe&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Oddajemy poukładany system + krótkie instrukcje, co robić dalej.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- PORTFOLIO --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="portfolio"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;Portfolio&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Tu wstawisz demo stronę, wizytówki (before/after) i realną realizację (np. mama).&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="portfolio"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card thumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Demo: Barber&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;small&gt;Strona klienta (demo) + układ oferty&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;small&gt;Dodaj link do demo&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card thumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Google: Before / After&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;small&gt;Optymalizacja wizytówki (demo)&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;small&gt;Dodaj screeny&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card thumb"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Real: Wizytówka&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;small&gt;Przykład prawdziwej wizytówki (np. mama)&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;small&gt;Dodaj link/screeny&lt;/small&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- CENNIK --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="cennik"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;Cennik&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Proste pakiety. Finalna cena zależy od branży i stanu wyjściowego.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="price"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card plan"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;START&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="p"&gt;Wizytówka Google + porządek w danych&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="val"&gt;od 400 zł&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;opis + usługi&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;godziny, kategorie, dane&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;3 posty Google&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card plan highlight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;STANDARD&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="p"&gt;Wizytówka Google + prosta strona&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="val"&gt;od 900 zł&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;Google (jak w START)&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;strona na Wix (landing)&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;formularz kontaktowy&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card plan"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;MIESIĘCZNY&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="p"&gt;Stała opieka i podstawowy content&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="val"&gt;od 500 zł / mc&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;aktualizacje Google&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;podstawowe posty&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;korekty i porządek&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- KONTAKT --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="kontakt"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="section-head"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h2&gt;Kontakt&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Napisz, a wrócimy z propozycją i zakresem działań.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contact"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Umów bezpłatną konsultację&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Opisz firmę i problem — odezwiemy się z propozycją działań.&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- UWAGA: To jest formularz statyczny. Żeby działał, użyj Netlify Forms lub Formspree (opis niżej). --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;form action="https://formspree.io/f/yourFormId" method="POST"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input name="name" placeholder="Imię i nazwisko" required /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input name="phone" placeholder="Telefon" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="email" name="email" placeholder="Email" required /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;textarea name="message" placeholder="W czym możemy pomóc?" required&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="btn" type="submit"&gt;Wyślij&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="tiny" style="margin-top:10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Możesz też napisać bezpośrednio: &lt;b&gt;tm.partners@example.com&lt;/b&gt; • &lt;b&gt;+48 000 000 000&lt;/b&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Co dostaniesz po kontakcie&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Krótki plan działania i wycenę — bez gadania i bez wciskania „pakietów 360°”.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;ul class="list"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;mini audyt Google / strony&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;propozycja zakresu&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;czas realizacji&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;li&gt;widełki cenowe&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="tiny" style="margin-top:10px;"&gt;* UK w przygotowaniu — po pierwszych case’ach z PL.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>© &lt;span id="year"&gt;&lt;/span&gt; T&amp;M Partners • Marketing dla lokalnych firm</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("year").textContent = new Date().getFullYear();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
